@@ -1,0 +1,310 @@
+---
+import data from "../data/cards.json";
+---
+
+<section class="seccion-carrusel">
+    <div class="botones">
+        <button class="tradicional">Pasteles Tradicionales</button>
+        <button class="cupcake">Cupcakes</button>
+        <button class="tematico">Pasteles Temáticos</button>
+    </div>
+
+    <div class="container-carrousel">
+        <div class="carousel">
+            <h2 class="titulo-carrousel">Explora Nuestros Productos</h2>
+            <button class="carousel-button prev">&#10094;</button>
+            <div class="carousel-slides" data-index="0">
+                {
+                    data.map((card) => (
+                        <div
+                            class="carousel-slide"
+                            data-category={card.categoria}
+                        >
+                            <img
+                                src={card.url}
+                                alt={card.nombre}
+                                class="card-image"
+                            />
+                            <h3 class="card-title">{card.nombre}</h3>
+                            <p class="card-description">{card.descripcion}</p>
+                        </div>
+                    ))
+                }
+            </div>
+            <button class="carousel-button next">&#10095;</button>
+            <div class="boton-carrusel">
+                <a href="/menu" class="boton-productos">Dulces Deliciosos Aqui</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/services/carrusel.js" type="module" is:inline></script>
+
+<style>
+    .container-carrousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        gap: 4vh;
+        align-items: center;
+        justify-content: center;
+        margin: 8vh;
+    }
+
+    .tradicional,
+    .cupcake,
+    .tematico {
+        width: 15vw;
+        height: 10vw;
+        border-radius: 15px;
+        border: none;
+        font-family: "Grand Hotel", system-ui;
+        font-weight: 400;
+        font-size: 2.2rem;
+    }
+
+    .tradicional {
+        background-color: #994c51;
+        color: white;
+    }
+
+    .cupcake {
+        background-color: #5c3e2e;
+        color: #ffb86d;
+    }
+
+    .tematico {
+        background-color: #e7b16c;
+        color: #551503;
+    }
+
+    .carousel {
+        position: relative;
+        width: 65%; /* Ajustado para que el contenedor ocupe un 65% del ancho de la pantalla */
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.7s ease;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .carousel-slide {
+        flex: 0 0 25%; /* Ajustado para 4 tarjetas visibles a la vez */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .carousel-button {
+        height: 15vh;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #994c51;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .carousel-button:disabled {
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: not-allowed;
+    }
+
+    .titulo-carrousel {
+        font-family: "Grand Hotel", system-ui;
+        font-weight: 400;
+        font-size: 42px;
+        color: #6e1507;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+
+    .card-image {
+        width: 80%; /* Ancho más pequeño */
+        height: 70%; /* Alto más grande */
+        border-radius: 10px;
+    }
+
+    .card-title {
+        font-size: 26px; /* Tamaño de fuente incrementado */
+        font-weight: bold;
+        color: #6e1507;
+        font-family: "Dosis", system-ui;
+        text-align: center;
+    }
+
+    .card-description {
+        width: 90%;
+        font-size: 1.2rem; /* Tamaño de fuente incrementado */
+        text-align: center;
+    }
+
+    .boton-carrusel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4vh;
+        box-sizing: border-box;
+    }
+
+    .boton-productos {
+        font-family: "Dosis", sans-serif;
+        width: 10vw;
+        padding: 12px;
+        border-radius: 15px;
+        border: none;
+        background-color: #5c3e2e;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .boton-productos:hover {
+        background-color: #e7b16c;
+        color: black;
+        transform: scale(1.2);
+    }
+
+    /* Media queries */
+    @media (max-width: 660px) {
+        .container-carrousel {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%; /* Muestra solo una tarjeta a la vez */
+            box-sizing: border-box;
+        }
+
+        .carousel-slides {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .titulo-carrousel {
+            font-size: 22px;
+            margin-bottom: 2vh;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #b50004;
+        }
+
+        .botones {
+            gap: 2vh;
+            margin: 4vh;
+        }
+
+        .tradicional,
+        .cupcake,
+        .tematico {
+            width: 30vw;
+            height: 20vw;
+            font-size: 1.2rem;
+        }
+        .boton-carrusel {
+            width: 100%;
+        }
+
+        .boton-productos {
+            width: 60vw;
+        }
+    }
+
+    /* Media queries para pantallas entre 661px y 1023px */
+    @media (min-width: 661px) and (max-width: 1023px) {
+        .carousel-slide {
+            flex: 0 0 50%; /* Muestra 2 tarjetas a la vez */
+            box-sizing: border-box;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 60%;
+            border-radius: 10px;
+        }
+
+        .card-description {
+            width: 100%;
+        }
+
+        .tradicional,
+        .cupcake,
+        .tematico {
+            width: 25vw;
+            height: 20vw;
+            font-size: 1.2rem;
+        }
+    }
+
+    /* Media queries para pantallas entre 800px y 1023px */
+    @media (min-width: 800px) and (max-width: 1023px) and (orientation: landscape) {
+        .carousel-slide {
+            flex: 0 0 33.3333%; /* Muestra 3 tarjetas a la vez */
+            box-sizing: border-box;
+        }
+
+        .boton-productos {
+            width: 30vw;
+        }
+    }
+
+    /* Media queries para tabletas en orientación horizontal */
+    @media (min-width: 661px) and (max-width: 1023px) and (orientation: landscape) {
+        .carousel {
+            width: 90vw;
+            box-sizing: border-box;
+        }
+
+        .card-image {
+            width: 25vw; /* Ajuste para que la imagen se adapte mejor */
+            height: 25vw; /* Ajuste automático de altura */
+        }
+
+        .card-description {
+            width: 25vw;
+        }
+    }
+</style>

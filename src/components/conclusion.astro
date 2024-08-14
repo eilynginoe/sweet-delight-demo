@@ -1,0 +1,258 @@
+<section class="container-conclusion">
+    <div class="conclusion">
+        <h2 class="titulo-conclusion">
+            Disfruta de dulces delicias en ocasiones especiales como:
+        </h2>
+        <div class="ocaciones">
+            <img
+                src="./img/primer-cumple.png"
+                alt="Bebe con un pastel de cumpleaños"
+                class="imagen-conclusion"
+            />
+            <div class="contenido">
+                <h3 class="subtitulo-conclusion">Celebraciones</h3>
+                <p class="texto-conclusion">
+                    Desde cumpleaños y aniversarios hasta graduaciones y bodas,
+                    cada celebración merece un toque dulce. Nuestros pasteles y
+                    postres personalizados añaden ese detalle especial que
+                    convierte cualquier evento en un recuerdo inolvidable.
+                    Permítenos ser parte de tus momentos más felices con
+                    nuestras delicias hechas con amor.
+                </p>
+            </div>
+            <img
+                src="./img/oficina.png"
+                alt="Personas en una oficina celebrando con un pastel"
+                class="imagen-conclusion"
+            />
+            <div class="contenido">
+                <h3 class="subtitulo-conclusion">Reuniones de Trabajo</h3>
+                <p class="texto-conclusion">
+                    Transforma cualquier reunión de trabajo en una experiencia
+                    más placentera con nuestros postres gourmet. Desde brunches
+                    ejecutivos hasta coffee breaks, nuestros productos añaden un
+                    toque de sofisticación y sabor que incentiva la creatividad
+                    y mejora el ánimo de todos los participantes.
+                </p>
+            </div>
+            <img
+                src="./img/regalo.png"
+                alt="Dulces en una caja de regalo"
+                class="imagen-conclusion"
+            />
+            <div class="contenido">
+                <h3 class="subtitulo-conclusion">Dulces Regalos</h3>
+                <p class="texto-conclusion">
+                    No hay mejor manera de demostrar aprecio y cariño que con un
+                    regalo dulce. Ya sea para agradecer a un amigo, sorprender a
+                    un ser querido o simplemente alegrar el día de alguien,
+                    nuestras cajas de postres y pasteles son la elección
+                    perfecta. Cada creación es un gesto de amor y atención al
+                    detalle, diseñado para hacer sonreír a quien lo reciba.
+                </p>
+            </div>
+        </div>
+        <div class="boton-conclusion">
+            <a href="/menu" class="descubre-mas">Descubre Más!</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container-conclusion {
+        width: 100%;
+    }
+
+    .conclusion {
+        width: 50vw;
+        display: grid;
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .titulo-conclusion {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-family: "Grand Hotel", system-ui;
+        font-size: 2rem;
+        color: #6e1507;
+        margin-bottom: 20px;
+        margin-top: 8vh;
+    }
+
+    .ocaciones {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "imagen1 texto1"
+            "texto2 imagen2"
+            "imagen3 texto3";
+        gap: 10px;
+    }
+
+    img:nth-of-type(1) {
+        grid-area: imagen1;
+    }
+
+    img:nth-of-type(2) {
+        grid-area: imagen2;
+    }
+
+    img:nth-of-type(3) {
+        grid-area: imagen3;
+    }
+
+    .contenido:nth-of-type(1) {
+        grid-area: texto1;
+    }
+
+    .contenido:nth-of-type(2) {
+        grid-area: texto2;
+    }
+
+    .contenido:nth-of-type(3) {
+        grid-area: texto3;
+    }
+
+    .imagen-conclusion {
+        width: 80%; /* Ajusta este valor para reducir el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto;
+        padding-top: 20px;
+        object-fit: cover; /* Ajusta la imagen dentro de su contenedor */
+        margin-bottom: 3vh;
+    }
+
+    .contenido {
+        width: 90%; /* Ajusta el ancho para evitar que sea más grande que necesario */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 4rem;
+        padding: 0;
+    }
+
+    .subtitulo-conclusion {
+        font-family: "Dosis", system-ui;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #5c3e2e;
+        margin-bottom: 15px;
+    }
+
+    .texto-conclusion {
+        font-family: "Dosis", system-ui;
+        font-size: 1.2rem;
+        color: #6e1507;
+    }
+
+    .boton-conclusion {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .descubre-mas {
+        font-family: "Dosis", sans-serif;
+        width: 20vw;
+        padding: 12px;
+        border-radius: 15px;
+        border: none;
+        background-color: #5c3e2e;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .descubre-mas:hover {
+        background-color: #e7b16c;
+        color: black;
+        transform: scale(1.2);
+    }
+
+    /* Estilos para pantallas entre 661px y 1023px en orientación vertical */
+    @media (min-width: 661px) and (max-width: 1023px) and (orientation: portrait) {
+        .conclusion {
+            width: 85%;
+        }
+
+        .contenido {
+            margin-bottom: 2.5rem;
+        }
+
+        .boton-conclusion {
+            width: 80%;
+        }
+
+        .descubre-mas {
+            width: 30vw;
+        }
+    }
+
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 660px) {
+        .ocaciones {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "imagen1"
+                "texto1"
+                "imagen2"
+                "texto2"
+                "imagen3"
+                "texto3";
+            gap: 10px;
+        }
+
+        .container-conclusion {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .conclusion {
+            width: 80%;
+        }
+
+        .ocaciones {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .imagen-conclusion {
+            width: 100%; /* Ajusta este valor para reducir el tamaño de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+            margin: 0;
+            padding: 0;
+            object-fit: cover; /* Ajusta la imagen dentro de su contenedor */
+            margin-bottom: 3vh;
+        }
+
+        .contenido {
+            margin-bottom: 2rem;
+        }
+
+        .boton-conclusion {
+            width: 90%;
+        }
+
+        .descubre-mas {
+            width: 60vw;
+        }
+    }
+
+    
+    /* Media queries para pantallas entre 800px y 1023px */
+    @media (min-width: 800px) and (max-width: 1023px) and (orientation: landscape) {
+        .conclusion {
+        width: 80vw;
+
+    }
+    }
+</style>

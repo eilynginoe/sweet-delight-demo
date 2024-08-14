@@ -1,0 +1,222 @@
+---
+
+---
+
+<header class="cabecera">
+    <section class="logoContainer">
+        <a href="/" class="logo-link">
+            <img
+                class="imgLogo"
+                src="./img/logo.png"
+                alt="Logo de Dulces Delicias"
+            />
+            <h1 class="logoname">
+                <span class="color-sweet">Sweet</span>
+                <span class="color-delight">Delight</span>
+            </h1>
+        </a>
+    </section>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/">INICIO</a></li>
+        <li><a href="/menu">MENÚ</a></li>
+        <li><a href="/contacto">CONTACTO</a></li>
+        <li><a href="/acerca-de">ACERCA DE</a></li>
+    </ul>
+</header>
+
+<script src="/services/script.js" is:inline></script>
+
+<style>
+    .cabecera {
+        width: 90%;
+        background-color: white;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+        align-self: center;
+        margin: 0 auto; /* Centra el elemento horizontalmente */
+        padding: 5px 10px 0 10px;
+        font-family: "Dosis", sans-serif;
+    }
+
+    .logo-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    .imgLogo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logoname {
+        font-family: "Grand Hotel", system-ui;
+        font-size: 1.7rem;
+    }
+
+    .color-sweet {
+        color: #994c51;
+    }
+
+    .color-delight {
+        color: #551503;
+    }
+
+    .nav-links {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 2rem 0;
+        list-style: none;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+
+    .nav-links li {
+        width: 8vw;
+        transition: background 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.5;
+        box-sizing: border-box;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: #994c51; /* Un tono más oscuro */
+        color: #ffffff; /* Texto blanco para contraste */
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #551503;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger:hover {
+        background-color: rgba(
+            153,
+            76,
+            81,
+            0.2
+        ); /* Fondo del ícono con transparencia al pasar el cursor */
+        transition: background-color 0.3s ease; /* Transición suave para el fondo */
+        border-radius: 5px; /* Añade un borde redondeado */
+    }
+
+    .hamburger:hover span {
+        background-color: #994c51; /* Cambia el color de las líneas al pasar el cursor */
+    }
+
+    .hamburger:active {
+        background-color: rgba(
+            153,
+            76,
+            81,
+            0.4
+        ); /* Fondo con más opacidad cuando se hace clic */
+        transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+        border-radius: 5px; /* Mantén el borde redondeado */
+    }
+
+    .hamburger:active span {
+        background-color: #994c51; /* Cambia el color de las líneas cuando se hace clic */
+        transition: background-color 0.3s ease; /* Transición suave para el color de las líneas */
+    }
+
+    @media (max-width: 660px) {
+        .header {
+            height: 35px;
+            display: block;
+        }
+
+        .container-logo {
+            width: 50vw;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+        .nav-links {
+            width: 100%;
+            display: none;
+            flex-flow: column wrap;
+            background: white;
+            width: 91%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links li {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 661px) and (max-width: 1023px) and (orientation: portrait) {
+        .nav-links {
+            width: 60%;
+        }
+        .nav-links li {
+            width: 20vw;
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (min-width: 661px) and (max-width: 1200px) and (orientation: landscape) {
+        .nav-links {
+            width: 70%;
+        }
+
+        .nav-links li {
+            width: 20vw;
+            font-size: 1rem;
+        }
+
+        .nav-links a {
+            padding: 5px;
+        }
+    }
+</style>

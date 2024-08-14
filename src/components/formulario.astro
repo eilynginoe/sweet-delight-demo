@@ -1,0 +1,109 @@
+<section class="contacto-formulario">
+    <h3>Contáctanos</h3>
+    <form>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required />
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <div class="contenedor-boton">
+            <button type="button" class="btn-decorativo">Enviar</button>
+        </div>
+    </form>
+</section>
+
+<style>
+    .contacto-formulario {
+        font-family: "Dosis", sans-serif;
+        background-color: transparent;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: left;
+        color: white;
+    }
+
+    .contacto-formulario h3 {
+        color: white;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+        border-radius: 10px;
+        border: 2px solid white;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group textarea:focus {
+        border-bottom-color: #f9e2d6;
+    }
+
+    .contenedor-boton {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        /*height: 100%;  Asegura que ocupe el 100% del contenedor */
+    }
+
+    .btn-decorativo {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #e7b16c;
+        color: #551503;
+        font-weight: bold;
+        border-radius: 15px;
+        text-transform: uppercase;
+        font-size: 16px;
+        cursor: not-allowed; /* Cursor decorativo, sin funcionalidad */
+        width: 70%;
+        transition:
+            transform background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .btn-decorativo:hover {
+        transform: scale(1.2);
+        background-color: white;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .contacto-formulario {
+            margin: 0 auto;
+            min-width: 35vw;
+
+        }
+    }
+</style>

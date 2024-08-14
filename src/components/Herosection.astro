@@ -1,0 +1,186 @@
+---
+// HeroSection.astro
+
+export interface Props {
+    titulo: string;
+    descripcion1: string; // Primera parte de la descripción
+    descripcion2: string; // Segunda parte de la descripción
+    buttonText: string;
+    imagen: string;
+    altTexto: string;
+}
+
+const { titulo, descripcion1, descripcion2, buttonText, imagen, altTexto } = Astro.props;
+---
+
+<section class="herosection-container">
+    <div class="intro">
+        <h1 class="titulo-principal">
+            {
+                titulo
+                    .split(" ")
+                    .map((word, index) => (
+                        <span
+                            class={
+                                index % 2 === 0
+                                    ? "color-sweet"
+                                    : "color-delight"
+                            }
+                        >
+                            {word}
+                        </span>
+                    ))
+            }
+        </h1>
+
+        <p class="introduccion">
+            {descripcion1}
+        </p>
+        <p class="introduccion">
+            {descripcion2}
+        </p>
+        
+        <div class="contenedor-boton">
+            <a href="/menu" class="btn-decorativo">{buttonText}</a>
+        </div>
+    </div>
+
+    <div class="image-herosection">
+        <img src={imagen} alt={altTexto} class="img-hero"/>
+    </div>
+</section>
+
+
+<style>
+    .herosection-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+        align-items: center; /* Alinea verticalmente el contenido */
+        justify-items: center; /* Centra el contenido horizontalmente */
+        padding: 50px;
+        margin: 0 auto;
+        max-width: 100%; /* Ajusta el ancho según tus necesidades */
+        min-width: 75%;
+        box-sizing: border-box;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .titulo-principal {
+        font-family: "Grand Hotel", system-ui;
+        margin: 10px 0 10px -5px;
+    }
+
+    .color-sweet {
+        color: #994c51;
+        font-size: 4rem;
+    }
+
+    .color-delight {
+        color: #551503;
+        font-size: 4rem;
+    }
+
+    .introduccion {
+        margin-bottom: 16px; /* Puedes ajustar este valor según lo que necesites */
+        width: 80%;
+        font-size: 1.5rem;
+        line-height: 1.1;
+        letter-spacing: -0.5px; /* Disminuye el espacio entre caracteres */
+        word-spacing: 5px; /* Aumenta el espacio entre palabras */
+    }
+
+    .image-herosection {
+        align-self: center;
+        min-width: 20vw;
+        margin-bottom: 3rem;
+    }
+
+    .img-hero{
+        min-width: 20vw;
+        margin-bottom: 3rem;
+    }
+
+    .contenedor-boton {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .btn-decorativo {
+        font-family: "Dosis", sans-serif;
+        padding: 12px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 15px;
+        border: none;
+        background-color: #5c3e2e;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-decorativo:hover {
+        background-color: #e7b16c;
+        color: black;
+        transform: scale(1.2);
+    }
+
+    /* Para pantallas menores a 850px */
+    @media (max-width: 850px) {
+        .herosection-container {
+            grid-template-columns: 1fr; /* Una sola columna */
+            width: 100%;
+        }
+
+        .image-herosection {
+            order: -1; /* Mueve la imagen antes del texto */
+            max-width: 80vw;
+            margin-bottom: 1rem;
+        }
+
+        .image-herosection img {
+            width: 100%; /* Asegura que la imagen ocupe el ancho completo de su contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        .intro {
+            margin-left: 1rem;
+            max-width: 100%;
+        }
+
+        .color-sweet {
+            font-size: 2.5rem;
+        }
+
+        .color-delight {
+            font-size: 2.5rem;
+        }
+
+        .introduccion {
+            width: 100%;
+            font-size: 1.25rem;
+            line-height: 1.3;
+        }
+
+    }
+
+    @media (max-width: 980px) and (orientation: landscape) {
+        .herosection-container {
+            grid-template-columns: 1fr; /* Una sola columna */
+            width: 100%;
+        }
+        .image-herosection {
+            order: -1; /* Mueve la imagen antes del texto */
+            width: 50vw;
+        }
+    }
+</style>

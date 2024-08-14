@@ -1,0 +1,226 @@
+---
+// Importar datos
+import data from "../data/cards.json";
+import Formulario from "./formulario.astro";
+
+// Definir un tipo para los postres
+type Postre = {
+  id: number;
+  nombre: string;
+  descripcion: string;
+  url: string;
+  categoria: string;
+};
+
+// Organizar los postres por categorías
+const categorias: Record<string, Postre[]> = {};
+
+data.forEach((postre: Postre) => {
+  if (!categorias[postre.categoria]) {
+    categorias[postre.categoria] = [];
+  }
+  categorias[postre.categoria].push(postre);
+});
+---
+
+<div class="menu-container">
+  {
+    Object.entries(categorias).map(([categoria, postres]) => {
+      let titulo;
+      switch (categoria) {
+        case "tematico":
+          titulo = "Pasteles Temáticos";
+          break;
+        case "tradicional":
+          titulo = "Pasteles Tradicionales";
+          break;
+        case "cupcake":
+          titulo = "Cupcakes";
+          break;
+        default:
+          titulo = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+      }
+
+      return (
+        <section class="postres-menu">
+          <h2 class="categoria-titulo">{titulo}</h2>
+          <div class="postres-container">
+            {postres.map((postre) => (
+              <div class="postre" data-titulo={postre.nombre}>
+                <img src={postre.url} alt={postre.nombre} />
+                <div class="descripcion-menu">
+                  <h3 class="titulo-descripcion">{postre.nombre}</h3>
+                  <p class="descripcion">{postre.descripcion}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal-formulario" style="display:none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Contáctanos</h3>
+
+    <!-- Reemplaza el formulario HTML con el componente Formulario -->
+    <Formulario />
+  </div>
+</div>
+<script src="/services/modal.js" defer></script>
+
+<style>
+  .menu-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 3.5rem;
+  }
+  .postres-menu {
+    width: 80vw;
+    padding: 3.5rem;
+    background-color: white;
+  }
+
+  .categoria-titulo {
+    font-family: "Grand Hotel", system-ui;
+    font-size: 4rem;
+    color: #551503;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .postres-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+    gap: 15px; /* Espacio entre los elementos */
+  }
+
+  .postre {
+    display: flex;
+    flex-direction: column; /* Los elementos del postre se organizan en columna */
+    align-items: center; /* Centra el contenido dentro del postre */
+    padding: 15px;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  }
+
+  /* Efecto de zoom y sombra al pasar el ratón por encima de la tarjeta */
+  .postre:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+  }
+
+  .postre img {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    margin-bottom: 1rem; /* Espacio entre la imagen y la descripción */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+  }
+
+  .descripcion-menu {
+    width: 15vw;
+  }
+
+  .descripcion {
+    font-size: 1.2rem;
+  }
+
+  .titulo-descripcion {
+    font-family: "Dosis", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #551503;
+  }
+
+  /* Estilo básico para ocultar el modal por defecto */
+  .modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+  }
+
+  /* Estilo del contenido del modal */
+  .modal-content {
+    color: white;
+    font-family: "Dosis", sans-serif;
+    background-color: #5c3e2e;
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%;
+  }
+
+  /* Estilo del botón de cerrar */
+  .close {
+    color: white;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .menu-container {
+    width: 100%;
+  }
+
+  .postres-menu {
+    width: 95vw;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0;
+
+  }
+
+    .postres-container {
+      width: 100%;
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+      gap: 35px;
+      box-sizing: border-box;
+    }
+
+    .postre img {
+      width: 70vw;
+      height: 70vw;
+    }
+
+    .postre{
+      padding: 10px;
+    }
+
+    .descripcion-menu {
+      width: 70vw;
+      padding: 10px;
+    }
+
+    .modal-content {
+    width: 85%;
+  }
+
+  .close {
+    font-size: 3.5rem;
+  }
+
+  }
+</style>

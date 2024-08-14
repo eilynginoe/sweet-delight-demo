@@ -1,0 +1,234 @@
+
+            [
+      {
+        "id": 1,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-amarillo.png",
+        "categoria": "cupcake"
+      },
+      {
+        "id": 2,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-cocoa.png",
+        "categoria": "cupcake"
+      },
+      {
+        "id": 3,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-colores.png",
+        "categoria": "cupcake"
+      },
+      {
+        "id": 4,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-pielimon.png",
+        "categoria": "cupcake"
+      },
+      {
+        "id": 5,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-crema.png",
+        "categoria": "cupcake"
+      },
+      {
+        "id": 6,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/cup-redvelvet.png",
+        "categoria": "cupcake"
+      },
+      { "id": 7,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-boda.png",
+        "categoria": "tematico"
+      },
+      {
+        "id": 8,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-circo.png",
+        "categoria": "tematico"
+      },
+      {
+        "id": 9,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-esferas.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 10,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-flores.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 11,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-flores1.png",
+        "categoria": "tematico"
+      },
+      {
+        "id": 12,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-flores2.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 13,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-flores3.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 14,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-futbol.png",
+        "categoria": "tematico"
+      },
+      {
+        "id": 15,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-mini-flores.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 16,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-rosa-azul.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 17,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-unicornio.webp",
+        "categoria": "tematico"
+      },
+      {
+        "id": 18,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-vainilla-fresas.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 19,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/t-violetas.jpg",
+        "categoria": "tematico"
+      },
+      {
+        "id": 20,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-arandanos.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 21,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-chesscake.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 22,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-chocolate-fresas1.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 23,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-chocolate-fresas2.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 24,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-chocolate.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 25,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-crema.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 26,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-cupcake.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 27,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-fresas.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 28,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-frutos-rojos.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 29,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-mini-chocolate.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 30,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-oreo.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 31,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-pay-frutos-rojos.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 32,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-redvelvet.jpg",
+        "categoria": "tradicional"
+      },
+      {
+        "id": 33,
+        "nombre": "Lorem Ipsum",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+        "url": "img/tradicion-rojo.jpg",
+        "categoria": "tradicional"
+      }
+    ]
+  

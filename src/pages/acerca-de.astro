@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Herosection from "../components/Herosection.astro";
+---
+
+<Layout title="Nosotros Sweet Delight">
+    <Herosection
+        titulo="Acerca de Nosotros"
+        descripcion1="En Sweet Delight, creemos que cada pastel cuenta una historia, y estamos aquí para ayudarte a elegir el capítulo perfecto para tu próxima celebración. Nuestro menú es una colección cuidadosamente seleccionada de delicias que han sido creadas con amor y dedicación."
+        descripcion2="Desde los clásicos que nunca pasan de moda hasta creaciones exclusivas que te sorprenderán, cada bocado es una experiencia única diseñada para deleitar tus sentidos. Explora nuestras opciones y encuentra el dulce perfecto para cada ocasión. ¡Prepárate para un viaje de sabores que te hará sonreír!"
+        buttonText="Solicita una cotización"
+        imagen="/img/tradicion-chocolate-fresas2.webp"
+        altTexto="Delicioso pastel decorado"
+    />
+    <section class="acerca-de-container">
+        <div class="container">
+            <div class="content">
+                <div class="section">
+                    <h2 class="mision">Misión</h2>
+                    <p>
+                        En <strong>Sweet Delight</strong>, nuestra misión es endulzar los momentos más especiales de la vida con pasteles y postres de la más alta calidad. Nos comprometemos a utilizar ingredientes frescos y técnicas artesanales para crear delicias que no solo cumplen con los estándares más altos, sino que también brindan una experiencia inolvidable en cada bocado. Queremos ser el destino preferido para quienes buscan celebrar con sabor y elegancia.
+                    </p>
+                </div>
+        
+                <div class="section">
+                    <h2 class="vision">Nuestra Visión</h2>
+                    <p>
+                        <strong>Sweet Delight</strong> aspira a ser reconocida como la tienda de postres líder en la región, conocida por su innovación y excelencia en el arte de la pastelería. Nos esforzamos por expandir nuestra presencia, mantener la calidad excepcional de nuestros productos y ofrecer un servicio al cliente excepcional. Nuestra visión es convertirnos en un símbolo de alegría y celebración, creando recuerdos dulces que nuestros clientes atesorarán por siempre.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</Layout>
+
+<style>
+    .acerca-de-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .container{
+        width: 50vw;
+        background-color: white;
+        border-radius: 20px;
+        padding: 5rem;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+    }
+
+    .section{
+        margin-bottom: 1.5rem;
+    }
+
+    .mision,
+    .vision{
+        font-family: "Dosis", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1.1rem;
+        color:#551503;
+    }
+
+    @media (max-width: 768px) {
+
+        .acerca-de-container{
+        margin-top: 1rem;
+    }
+        .container{
+        width: 90vw;
+        padding: 20px;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+
+    }
+    }
+</style>
+
+
+
+
+

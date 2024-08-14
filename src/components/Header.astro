@@ -46,31 +46,82 @@
         font-family: "Dosis", sans-serif;
     }
 
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* Añadimos la animación de aparición */
+        animation: fadeIn 1s ease forwards;
+    }
+
     .logo-link {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
         text-decoration: none;
-        padding: 5px;
+        color: inherit;
+        /* Añadimos una transición para el efecto hover */
+        transition:
+            transform 0.5s ease,
+            filter 0.5s ease;
     }
 
     .imgLogo {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: auto;
+        /* Añadimos la transición para la animación */
+        transition:
+            transform 0.5s ease,
+            filter 0.5s ease;
     }
 
     .logoname {
         font-family: "Grand Hotel", system-ui;
-        font-size: 1.7rem;
+        font-size: 2.5rem;
+        margin-left: 10px;
+        /* Añadimos la transición y los valores iniciales para la animación */
+        transform: translateY(20px);
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease;
     }
 
     .color-sweet {
-        color: #994c51;
+        color: #994c51; /* Coral */
     }
 
     .color-delight {
-        color: #551503;
+        color: #551503; /* BlueViolet */
+    }
+
+    /* Definimos la animación de aparición del contenedor */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Efecto hover en el logo */
+    .logo-link:hover .imgLogo {
+        transform: scale(1.1) rotate(10deg);
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .logo-link:hover .logoname {
+        transform: translateY(0);
+    }
+
+    .logo-link:hover .color-sweet {
+        color: #551503 ;
+    }
+
+    .logo-link:hover .color-delight {
+        color: #E7B16C;
     }
 
     .nav-links {

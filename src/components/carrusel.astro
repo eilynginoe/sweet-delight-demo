@@ -59,32 +59,56 @@ import data from "../data/cards.json";
         margin: 8vh;
     }
 
-    .tradicional,
-    .cupcake,
-    .tematico {
-        width: 15vw;
-        height: 10vw;
-        border-radius: 15px;
-        border: none;
-        font-family: "Grand Hotel", system-ui;
-        font-weight: 400;
-        font-size: 2.2rem;
-    }
+    .botones button {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .tradicional {
-        background-color: #994c51;
-        color: white;
-    }
+.tradicional,
+.cupcake,
+.tematico {
+    width: 15vw;
+    height: 10vw;
+    border-radius: 15px;
+    border: none;
+    font-family: "Grand Hotel", system-ui;
+    font-weight: 400;
+    font-size: 2.2rem;
+}
 
-    .cupcake {
-        background-color: #5c3e2e;
-        color: #ffb86d;
-    }
+.tradicional {
+    background-color: #994c51;
+    color: white;
+}
 
-    .tematico {
-        background-color: #e7b16c;
-        color: #551503;
-    }
+.cupcake {
+    background-color: #5c3e2e;
+    color: #ffb86d;
+}
+
+.tematico {
+    background-color: #e7b16c;
+    color: #551503;
+}
+
+/* Efecto hover */
+.tradicional:hover {
+    transform: scale(1.1);
+    background-color: #b8656b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cupcake:hover {
+    transform: scale(1.1);
+    background-color: #7a563c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tematico:hover {
+    transform: scale(1.1);
+    background-color: #e8c089;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
     .carousel {
         position: relative;

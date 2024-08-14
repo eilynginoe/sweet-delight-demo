@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
     const slidesContainer = document.querySelector('.carousel-slides');
+    const tituloCarrousel = document.querySelector('.titulo-carrousel'); // Selecciona el elemento del título
+
     let slides = Array.from(slidesContainer.children);
     let slidesToShow = window.innerWidth < 660 ? 1 : 4; // Número de diapositivas visibles
     let totalSlides = slides.length;
@@ -33,6 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = 0;
         totalSlides = slides.filter(slide => slide.style.display === '').length;
         updateSlides();
+
+        // Actualiza el texto del título basado en la categoría seleccionada
+        if (category === 'tradicional') {
+            tituloCarrousel.textContent = 'Pasteles Tradicionales';
+        } else if (category === 'cupcake') {
+            tituloCarrousel.textContent = 'Cupcakes';
+        } else if (category === 'tematico') {
+            tituloCarrousel.textContent = 'Pasteles Temáticos';
+        } else {
+            tituloCarrousel.textContent = 'Explora Nuestros Productos';
+        }
     }
 
     function handleResize() {
@@ -52,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa el carrusel mostrando la primera diapositiva
     updateSlides();
 });
+
 
 
 
